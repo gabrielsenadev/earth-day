@@ -17,30 +17,10 @@
   --e-g-d: var(--earth-grass-deep);
   --e-s-d: var(--earth-sea-deep);
   --e-s: var(--earth-sea);
-}
+  --e-f-h: var(--earth-flame-hot);
+  --e-f-p: var(--earth-flame-propagation);
 
-html, body, main {
-  height: 100%;
-} 
-
-body {
-  background-color: var(--background-body);
-}
-
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#earth {
-  font-size: 16px;
-  width: 1em;
-  height: 1em;
-  margin-left: -16em;
-  margin-top: -16em;
-  box-shadow:
-  6em 0 var(--e-g-d), 7em 0 var(--e-g), 8em 0 var(--e-g), 9em 0 var(--e-g),
+  --earth-base-shadow: 6em 0 var(--e-g-d), 7em 0 var(--e-g), 8em 0 var(--e-g), 9em 0 var(--e-g),
   4em 1em var(--e-g), 5em 1em var(--e-g-d), 6em 1em var(--e-g-d), 7em 1em var(--e-g), 8em 1em var(--e-g), 9em 1em var(--e-g), 10em 1em var(--e-s), 11em 1em var(--e-s),
   3em 2em var(--e-g), 4em 2em var(--e-g), 5em 2em var(--e-g), 6em 2em var(--e-g), 7em 2em var(--e-g), 8em 2em var(--e-g), 9em 2em var(--e-g), 10em 2em var(--e-g), 11em 2em var(--e-s-d), 12em 2em var(--e-s),
   2em 3em var(--e-g), 3em 3em var(--e-g), 4em 3em var(--e-g), 5em 3em var(--e-g), 6em 3em var(--e-g-d), 7em 3em var(--e-g-d), 8em 3em var(--e-g), 9em 3em var(--e-g), 10em 3em var(--e-s-d), 11em 3em var(--e-s-d), 12em 3em var(--e-s), 13em 3em var(--e-g),
@@ -55,6 +35,128 @@ main {
   2em 12em var(--e-g), 3em 12em var(--e-s), 4em 12em var(--e-s), 5em 12em var(--e-s-d), 6em 12em var(--e-g), 7em 12em var(--e-g-d), 8em 12em var(--e-g), 9em 12em var(--e-s), 10em 12em var(--e-s-d), 11em 12em var(--e-s-d), 12em 12em var(--e-s), 13em 12em var(--e-s-d),
   3em 13em var(--e-s), 4em 13em var(--e-s), 5em 13em var(--e-g), 6em 13em var(--e-g), 7em 13em var(--e-s), 8em 13em var(--e-s), 9em 13em var(--e-s), 10em 13em var(--e-s), 11em 13em var(--e-s), 12em 13em var(--e-s),
   4em 14em var(--e-s), 5em 14em var(--e-g), 6em 14em var(--e-s-d), 7em 14em var(--e-s), 8em 14em var(--e-s), 9em 14em var(--e-s-d), 10em 14em var(--e-s-d), 11em 14em var(--e-s),
-  6em 15em var(--e-s), 7em 15em var(--e-s), 8em 15em var(--e-s-d), 9em 15em var(--e-s-d)
-  ;
+  6em 15em var(--e-s), 7em 15em var(--e-s), 8em 15em var(--e-s-d), 9em 15em var(--e-s-d);
+  
+  --earth-flames-l-1: 13em 6em var(--e-f-p), 13em 7em var(--e-f-h), 14em 7em var(--e-f-p);
+  --earth-flames-l-2: 9em 11em var(--e-f-p), 9em 10em var(--e-f-h), 10em 10em var(--e-f-p);
+  --earth-flames-l-3: 1em 9em var(--e-f-p), 2em 9em var(--e-f-h), 2em 10em var(--e-f-p);
+  --earth-flames-l-4: 6em 9em var(--e-f-p), 6em 8em var(--e-f-h), 5em 8em var(--e-f-p);
+  --earth-flames-l-5: 8em 0em var(--e-f-p), 9em 0em var(--e-f-h), 9em 1em var(--e-f-p), 5em 3em var(--e-f-h), 6em 3em var(--e-f-p), 5em 4em var(--e-f-p), var(--earth-base-shadow);
+
+  --earth-water-fill-1: 2em 4em var(--e-s-d), 2em 5em var(--e-s-d), 2em 4em var(--e-s-d), 1em 5em var(--e-s-d), 2em 4em var(--e-s-d), 1em 6em var(--e-s-d);
+  --earth-water-fill-2: 6em 0 var(--e-s-d), 6em 1em var(--e-s-d), 5em 1em var(--e-s-d), 7em 2em var(--e-s-d), 7em 3em var(--e-s-d);
+  --earth-water-fill-3: 12em 4em var(--e-s-d);
+  --earth-water-fill-4: 14em 5em var(--e-s-d), 14em 6em var(--e-s-d), 15em 6em var(--e-s-d), 15em 7em var(--e-s-d);
+  --earth-water-fill-5: 7em 7em var(--e-s-d), 7em 8em var(--e-s-d), 8em 8em var(--e-s-d), 8em 9em var(--e-s-d);
+  --earth-water-fill-6: 5em 10em var(--e-s-d), 6em 10em var(--e-s-d), 6em 11em var(--e-s-d), 7em 11em var(--e-s-d), 7em 12em var(--e-s-d), 8em 11em var(--e-s-d);
+
+  --earth-water-fill-chunk-1: 15em 9em var(--e-s), 15em 8em var(--e-s), 14em 8em var(--e-s), 14em 7em var(--e-s), 13em 7em var(--e-s), 13em 6em var(--e-s), 13em 3em var(--e-s), 13em 4em var(--e-s), 13em 5em var(--e-s), 12em 5em var(--e-s), 12em 6em var(--e-s), 14em 4em var(--e-s);
+  --earth-water-fill-chunk-2: 0 9em var(--e-s), 1em 9em var(--e-s), 2em 9em var(--e-s), 2em 10em var(--e-s), 1em 10em var(--e-s), 1em 11em var(--e-s), 2em 11em var(--e-s), 2em 12em var(--e-s);
+  --earth-water-fill-chunk-3: 5em 14em var(--e-s), 5em 13em var(--e-s), 6em 13em var(--e-s), 6em 12em var(--e-s), 8em 12em var(--e-s), 9em 11em var(--e-s), 9em 10em var(--e-s), 10em 10em var(--e-s), 9em 9em var(--e-s), 9em 8em var(--e-s), 8em 10em var(--e-s), 7em 10em var(--e-s), 7em 9em var(--e-s), 6em 9em var(--e-s), 5em 9em var(--e-s), 6em 8em var(--e-s), 5em 8em var(--e-s), 4em 8em var(--e-s), 10em 9em var(--e-s);
+  --earth-water-fill-chunk-4: 6em 7em var(--e-s), 5em 7em var(--e-s), 4em 7em var(--e-s), 5em 6em var(--e-s), 5em 5em var(--e-s), 4em 5em var(--e-s), 3em 5em var(--e-s), 3em 4em var(--e-s), 1em 4em var(--e-s), 4em 4em var(--e-s), 5em 4em var(--e-s), 6em 4em var(--e-s), 7em 4em var(--e-s), 8em 4em var(--e-s), 8em 5em var(--e-s), 8em 3em var(--e-s), 9em 3em var(--e-s), 9em 2em var(--e-s), 8em 2em var(--e-s), 10em 2em var(--e-s);
+  --earth-water-fill-chunk-5: 2em 3em var(--e-s), 3em 3em var(--e-s), 4em 3em var(--e-s), 5em 3em var(--e-s), 6em 3em var(--e-s), 8em 3em var(--e-s), 9em 3em var(--e-s), 10em 2em var(--e-s), 10em 2em var(--e-s), 9em 2em var(--e-s), 8em 2em var(--e-s), 6em 2em var(--e-s), 5em 2em var(--e-s), 4em 2em var(--e-s), 3em 2em var(--e-s), 4em 1em var(--e-s), 7em 1em var(--e-s), 8em 1em var(--e-s), 9em 1em var(--e-s), 9em 0em var(--e-s), 8em 0em var(--e-s), 7em 0em var(--e-s);
+}
+
+html, body, main {
+  height: 100%;
+} 
+
+body {
+  background-color: var(--background-body);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-top: 200px;
+  font-family: monospace;
+  text-transform: uppercase;
+  opacity: 1;
+  animation: text 6s steps(1, end) 1;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#earth {
+  font-size: 16px;
+  width: 1em;
+  height: 1em;
+  margin-left: -16em;
+  margin-top: -16em;
+  box-shadow: var(--earth-water-fill-chunk-5), var(--earth-water-fill-chunk-4), var(--earth-water-fill-chunk-3), var(--earth-water-fill-chunk-2), var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  animation: earth 7s steps(1, end) infinite forwards;
+}
+
+
+@keyframes text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes earth {
+  0% {
+    box-shadow: var(--earth-base-shadow);
+  }
+
+  8.3333% {
+    box-shadow: var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-base-shadow);
+  }
+
+  16.6666% {
+    box-shadow: var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-base-shadow);
+  }
+
+  24.9999% {
+    box-shadow: var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  33.3332% {
+    box-shadow: var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  41.6665% {
+    box-shadow: var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  49.9998% {
+    box-shadow: var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  58.3331% {
+    box-shadow: var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  66.6664% {
+    box-shadow: var(--earth-water-fill-chunk-2), var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  74.9997% {
+    box-shadow: var(--earth-water-fill-chunk-3), var(--earth-water-fill-chunk-2), var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  83.333% {
+    box-shadow: var(--earth-water-fill-chunk-4), var(--earth-water-fill-chunk-3), var(--earth-water-fill-chunk-2), var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
+  86.6663% {
+    box-shadow: var(--earth-water-fill-chunk-5), var(--earth-water-fill-chunk-4), var(--earth-water-fill-chunk-3), var(--earth-water-fill-chunk-2), var(--earth-water-fill-chunk-1), var(--earth-water-fill-6), var(--earth-water-fill-5), var(--earth-water-fill-4), var(--earth-water-fill-3), var(--earth-water-fill-1), var(--earth-water-fill-2), var(--earth-flames-l-1), var(--earth-flames-l-2), var(--earth-flames-l-3), var(--earth-flames-l-4), var(--earth-flames-l-5), var(--earth-base-shadow);
+  }
+
 }
