@@ -79,7 +79,7 @@ h2 {
   font-family: monospace;
   text-transform: uppercase;
   opacity: 1;
-  animation: text 6s steps(1, end) 1;
+  animation: text 10s ease 1;
 }
 
 #earth-wrapper {
